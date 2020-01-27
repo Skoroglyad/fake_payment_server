@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}  Wait Payment {% endblock %}
+
+{% block body %}
+
+    <h1>Hi. I am your merchant</h1>
+    {% if status == constant('App\\Entity\\Payment::PAYMENT_SUCCESS') %}
+        <h2 style="color: #718C00">Congrats. Your payment is Successful!</h2>
+    {% else %}
+        <h2 style="color: red">Sorry. Your payment is Canceled. Check your card number!</h2>
+    {% endif %}
+
+    <a href="{{ url('index') }}" >Make a payment again</a>
+
+{% endblock %}

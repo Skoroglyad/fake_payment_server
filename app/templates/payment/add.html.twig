@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}  New Payment {% endblock %}
+
+{% block body %}
+    <div style="text-align: center;">
+        <h1>New Payment</h1>
+
+       <p> Enter Bad Card number:  <span style="color: #AA3333">4123231111111111</span></p>
+        <p>Enter Good Card Number: <span style="color: #718C00">4123231111111115</span></p>
+        <div>
+            {{ form_start(form) }}
+
+                <div class="row">
+                    <div>
+                        {{ form_label(form.cardNumber, null, {'label_attr': {'class': ' '}}) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.cardNumber) }}
+                    </div>
+                    <div class="error">
+                        {{ form_errors(form.cardNumber) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        {{ form_label(form.cvv, null, {'label_attr': {'class': ' '}}) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.cvv) }}
+                    </div>
+                    <div class="error">
+                        {{ form_errors(form.cvv) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        {{ form_label(form.holder, null, {'label_attr': {'class': ' '}}) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.holder) }}
+                    </div>
+                    <div class="error">
+                        {{ form_errors(form.holder) }}
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                {{ form_widget(form.submit, {'attr': {'class': 'blue_solid_button'}}) }}
+            </div>
+
+            {{ form_rest(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+    <style>
+        .row{
+            margin-bottom: 20px;
+        }
+        input{
+            width: 200px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+{% endblock %}

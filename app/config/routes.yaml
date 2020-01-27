@@ -1,0 +1,13 @@
+index:
+    path: /
+    controller: App\Controller\PaymentController::indexAction
+
+show_fake_merchant:
+    path: /merchant
+    controller: App\Controller\PaymentController::showFakeMerchantAction
+
+send_payment:
+    path: /payment/{id}/send
+    controller: App\Controller\PaymentController::sendPaymentAction
+    requirements:
+        id: \d+

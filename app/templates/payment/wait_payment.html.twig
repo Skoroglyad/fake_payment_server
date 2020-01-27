@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}  Wait Payment {% endblock %}
+
+{% block body %}
+
+    <h1>We are trying to handle your payment. Please wait.</h1>
+    <h2 id="countdown"></h2>
+
+{% endblock %}
+
+{% block javascripts  %}
+
+    <script>
+        var timeleft = 3;
+        var downloadTimer = setInterval(function(){
+            document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+            timeleft -= 1;
+            if(timeleft <= 0){
+                clearInterval(downloadTimer);
+                document.getElementById("countdown").innerHTML = "Finished"
+                document.location.reload(true);
+            }
+        }, 3000);
+
+    </script>
+
+{% endblock %}
