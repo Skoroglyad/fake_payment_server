@@ -1,26 +1,3 @@
-
-
-
-
-Skip to content
-Using Gmail with screen readers
-Error checking mail for ivan_alkonaft@ukr.net.  
-Details
-  
-Dismiss
-
-Conversations
-EnglishDom
-Что посмотреть этой осенью на английском? (часть 2)
- - Смотри новое видео на канале EnglishDom EnglishDom Что еще посмотреть этой осенью на английском? Недавно мы рассказывали о новинках кино этой осени, которые ты можешь посмотреть на английском. Сегодня
- 
-15/10/2019
-12.09 GB (71%) of 17 GB used
-Manage
-Terms · Privacy · Programme Policies
-Last account activity: 13 minutes ago
-Details
-
 Создать приложение используя Symfony последней версии (не ниже 4), на котором пользователи будут размещать свои посты с новостями.
 
 Для реализации приложения необходимо пользоваться Symfony bundles (например, 30 самых популярных, из которых будете использовать несколько), работа с БД через Doctrine. Обязательно использовать: FOSUserBundle, Timestampable, Sluggable, Migrations.
